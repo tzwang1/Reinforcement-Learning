@@ -11,6 +11,11 @@
 * Read through a [beginners guide to reinforcement learning](https://www.analyticsvidhya.com/blog/2017/01/introduction-to-reinforcement-learning-implementation/
 ) to go through some examples of reinforcement learning
 
+    * **Comments**
+    Website contained code example of implementing a Deep Q-learning algorithm to train an agent to play cartpole.
+    My own implementation in the carpole_deepQlearning.py file.
+
+
 
 
 
