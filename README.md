@@ -12,8 +12,27 @@
 
     * **Comments** <br>
     Website contained code example of implementing a Deep Q-learning algorithm to train an agent to play cartpole.
-    My own implementation in the carpole_deepQlearning.py file.
+    My own implementation in the carpole_deepQlearning.py file. The implementation was straightfoward, however I feel as if some of the important concepts were really explained. For example the article did not really explain how rewards were being given to the agent.
+    <br>
+    I probably need to take a look at the keras documenation to see exactly what I have implemented.
+    <br>
+    Overall this article is too high level for me to be able to really learn anything concrete from it. It gave me a very hazy high-level understanding of reinforcement learning. All I did was use a library.
 
+    * **Unanswered Questions/Tasks** <br>
+        * [] Look at Keras documentation
+        * [] Take a look at multiagent reinforcement learning. This [paper](https://link.springer.com/chapter/10.1007/978-3-642-27645-3_14) titled: Game theory and multi-agent reinforcement learning may be interesting.
+        * [] Need to improve fundamental understanding of how reinforcement learning works
+
+
+    * **Interesting Insights!** <br>
+        * Game theory and multiagent reinforcement learning (the idea of multiple agents being trained in the same environment) may be an interesting topic to learn more about.
+        * Other areas RL is being applied to
+            * Game theory and multi-agent interaction
+            * Robotics
+            * Computer networks
+            * Vehicular navigation
+            * Medicine
+            * Industrial Logic
 
 
 
