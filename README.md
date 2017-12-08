@@ -35,6 +35,9 @@
             * Medicine
             * Industrial Logic
 
+### Object 3 ###
+* Start reading through [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/bookdraft2017nov5.pdf) to improve basic understanding on reinforcement learning.
+
 
 
 
