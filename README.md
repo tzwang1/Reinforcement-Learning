@@ -20,9 +20,9 @@
     Overall this article is too high level for me to be able to really learn anything concrete from it. It gave me a very hazy high-level understanding of reinforcement learning. All I did was use a library.
 
     * **Unanswered Questions/Tasks** <br>
-        * - [ ] Look at Keras documentation
-        * - [ ] Take a look at multiagent reinforcement learning. This [paper](https://link.springer.com/chapter/10.1007/978-3-642-27645-3_14) titled: Game theory and multi-agent reinforcement learning may be interesting.
-        * - [ ] Need to improve fundamental understanding of how reinforcement learning works
+        - [ ] Look at Keras documentation
+        - [ ] Take a look at multiagent reinforcement learning. This [paper](https://link.springer.com/chapter/10.1007/978-3-642-27645-3_14) titled: Game theory and multi-agent reinforcement learning may be interesting.
+        - [ ] Need to improve fundamental understanding of how reinforcement learning works
 
 
     * **Interesting Insights!** <br>
