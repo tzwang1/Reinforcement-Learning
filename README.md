@@ -38,6 +38,11 @@
 ### Object 3 ###
 * Start reading through [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/bookdraft2017nov5.pdf) to improve basic understanding on reinforcement learning.
 
+    * Reading Introduction
+        * Gives an introduction to reinforcement learning, gives motivation on its importance, some basic history.
+        * Describes the _policy_, _reward signal_, _value function_, and a _model_ of the environment.
+            * _Policy_: learning agents way of behaving at a given time. A mapping of perceived states of the environment to actions to be taken in those states. In general, policies may be stochastic.
+            * _
 
 
 
