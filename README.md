@@ -42,7 +42,9 @@
         * Gives an introduction to reinforcement learning, gives motivation on its importance, some basic history.
         * Describes the _policy_, _reward signal_, _value function_, and a _model_ of the environment.
             * _Policy_: learning agents way of behaving at a given time. A mapping of perceived states of the environment to actions to be taken in those states. In general, policies may be stochastic.
-            * _
+            * _Reward signal_: The goal in a reinforcement learning problem. On each time step, the environment sends a single number to the agent. This number is the _reward_. The agents objective is to maximize the total _reward_ it receives over time. The _reward signal_ is the primary basis for changing the _policy_; if an action selected by the policy results in a low reward, then the policy may be changed to select some other action in that situation in the future.
+            * _Value_: The _value_ of a state is the total _reward_ an agent can expect to accumulate over the future, starting from that state. Whereas _reward_ immediate, intrinsic desirability of environmental states, _values_ indicate the long-term desirability of states that are likely to follow, and the rewards available in those states.
+            * _Model_: Mimics the behavior of the environment, and allows inferences to be made about how the environment will behave. For example, give a state and an action, a model may predict the resultant next state, and next reward. 
 
 
 
