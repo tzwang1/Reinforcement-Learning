@@ -48,7 +48,7 @@
         * Describes the differences between _evolutionary methods_, and methods that learn _value functions_.
             * To evaluate a policy an _evolutionary method_ holds the policy fixed and plays many against the opponent. The frequency of wins gives an unbiased estimate of the probability of winning with that policy, and can be used to direct the next policy selection. However, each policy change is only made after many games, and only the final outcome of the game is used. What happens during the game is ignored. E.g. If a player wins then all of its behavior during the game is given credit, independently of how speicific moves might have been critical to the win. 
             * Value functions allow individual states to be measured - learning while interacting with the environment. 
-        * Tic-tac-toe example was helpful in understanding how greedy and exploratory moves differ, and how they affected the policy.
+        * Tic-tac-toe example was helpful in understanding how exploitory and exploratory moves differ, and how they affected the policy.
 
 
 
