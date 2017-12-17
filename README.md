@@ -63,6 +63,10 @@
         * The value of a state _s_ under a policy _pi_, denoted _v<sub>&pi;</sub>(s)_ is the expected return when starting in _s_, and following _pi_ thereafter. We call _v<sub>&pi;</sub>(s)_ the _state-value function for policy <sub>&pi;<sub>.
         * The value of taking action _a_ in state _s_ under a policy _pi_, denoted _q<sub>&pi;</sub>(s,a)_ is the expected return starting from s, taking the action _a_, and thereafter following policy _pi_.
         We call _q<sub>&pi;</sub>(s,a)_ the action-value function for policy <sub>&pi;</sub>.
+        * The Bellman equation expresses the relationship between the value of a state and the values of its successor state. Bellman equations exist for both the value function, and the action value function.
+        * Optimal policies - a policy whose expected return is greater than or equal to the expected return of all other policies in every state. Could be more than one. All optimal policies share the same _optimal state-value function_, denoted _v<sub>*</sub>_. And the same _optimal action-value function_, denoted _q<sub>*</sub>.
+        * The Bellman optimality equation defines how the optimal value of a state is related to the optimal value of successor states.
+        * Usually have to use approximation methods and heuristics to represent these equations, otherwise it would be computationally inefficient, and take forever to solve.
 
 
 
