@@ -53,6 +53,9 @@
         * Looked at OpenAI Gym tutorial - it goes through the basic syntax, and commands you can call to interface with the environment.
 
     * Notes from reading **Chapter 3: Finite Markov Decision Process**
+        * Mathematically formalizes the general concepts in reinforcement learning
+            * agent performs action -> actions influences environment -> repeat
+        * Rewards are one number, and should be given based on _what_ goal you want the agent to achieve, not based on _how_ you want the agent to achieve a goal. For example, giving rewards to a chess playing agent for taking more of the opponents pieces with a goal to win the game is bad, because it could find a way to take more of the oppponents pieces while still losing the game.
 
 
 
