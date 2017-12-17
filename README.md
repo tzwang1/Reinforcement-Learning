@@ -56,6 +56,12 @@
         * Mathematically formalizes the general concepts in reinforcement learning
             * agent performs action -> actions influences environment -> repeat
         * Rewards are one number, and should be given based on _what_ goal you want the agent to achieve, not based on _how_ you want the agent to achieve a goal. For example, giving rewards to a chess playing agent for taking more of the opponents pieces with a goal to win the game is bad, because it could find a way to take more of the oppponents pieces while still losing the game.
+        * Use a discount rate to value immediate rewards more than future rewards - allows us to model continuous games where the reward could go to infinity if not bounded. 0 <= _reward value_ <= 1. A reward closer to 1 makes future rewards more important. The agent becomes more far-sighted. A reward of zero makes the agent only concered with immediate rewards. i.e it chooses an action so as to only maximize the reward at time _t+1_.
+        * _Value functions_ estimate how good it is for the agent to be in a given state.
+        * A _policy_ is a mapping from states to probabilities of selecting each possible action.
+        * Reinforcement learning methods specify how the agent's policy is changed as a result of its experience.
+        * The value of a state _s_ under a policy _pi_, denoted _v<sub>&pi</sub>(s)_ is the expected return when starting in _s_, and following _pi_ thereafter.
+        * The value of taking action _a_ in state _s_ under a policy _pi_, denoted _q<sub>pi</sub>(s,a)_ is the expected return starting from s, taking the action _a_, and thereafter following policy _pi_.
 
 
 
