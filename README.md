@@ -60,8 +60,8 @@
         * _Value functions_ estimate how good it is for the agent to be in a given state.
         * A _policy_ is a mapping from states to probabilities of selecting each possible action.
         * Reinforcement learning methods specify how the agent's policy is changed as a result of its experience.
-        * The value of a state _s_ under a policy _pi_, denoted _v<sub>&pi</sub>(s)_ is the expected return when starting in _s_, and following _pi_ thereafter.
-        * The value of taking action _a_ in state _s_ under a policy _pi_, denoted _q<sub>pi</sub>(s,a)_ is the expected return starting from s, taking the action _a_, and thereafter following policy _pi_.
+        * The value of a state _s_ under a policy _pi_, denoted _v<sub>&pi;</sub>(s)_ is the expected return when starting in _s_, and following _pi_ thereafter.
+        * The value of taking action _a_ in state _s_ under a policy _pi_, denoted _q<sub>&pi;</sub>(s,a)_ is the expected return starting from s, taking the action _a_, and thereafter following policy _pi_.
 
 
 
