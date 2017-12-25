@@ -41,3 +41,16 @@ class GridworldEnv(discrete.DiscreteEnv):
         MAX_X = shape[1]
 
         P = {}
+        grid = np.arange(nS).reshape(shape)
+        it = np.nditer(grid, flags=['multi_index'])
+
+        while not it.finished:
+            s = it.iterindex
+            y, x = it.multi_index
+
+            P[s] = {a : [] for a in range(nA)}
+
+            is_done = lambda s: s == 0 or s == (nS - 1)
+            reward = 0.0 if is_done(s) else -1.0
+
+            # We're stuck in a terminal state
