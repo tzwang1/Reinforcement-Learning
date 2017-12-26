@@ -1,4 +1,4 @@
-import numpy as numpy
+import numpy as np
 import sys
 from gym.envs.toy_text import discrete
 
@@ -66,9 +66,9 @@ class GridworldEnv(discrete.DiscreteEnv):
                 ns_down = s if y == (MAX_Y - 1) else s + MAX_X
                 ns_left = s if x == 0 else s - 1
                 P[s][UP] = [(1.0, ns_right, reward, is_done(ns_right))]
-                p[s][RIGHT] = [(1.0, ns_right, reward, is_done(ns_right))]
+                P[s][RIGHT] = [(1.0, ns_right, reward, is_done(ns_right))]
                 P[s][DOWN] = [(1.0, ns_down, reward, is_done(ns_down))]
-                P[s][LEFT] = [(1.0, ns_left, rewrd, is_done(ns_left))]
+                P[s][LEFT] = [(1.0, ns_left, reward, is_done(ns_left))]
 
             it.iternext()
 
@@ -77,7 +77,7 @@ class GridworldEnv(discrete.DiscreteEnv):
             
             # We expose the model of the environment for educational purposes
             # This should not be used in any model-free learning algorithm
-            self.P = p
+            self.P = P
 
             super(GridworldEnv, self).__init__(nS, nA, P, isd)
         
@@ -87,7 +87,7 @@ class GridworldEnv(discrete.DiscreteEnv):
 
             outfile = StringIO() if mode == 'ansi' else sys.stdout
 
-            grid = np.arange(self.nS).reshape(self.shape
+            grid = np.arange(self.nS).reshape(self.shape)
             
             it = np.nditer(grid, flags=['multi_index'])
             while not it.finished:

@@ -1,8 +1,8 @@
-import numpy as numpy
+import numpy as np
 import sys
 if "../" not in sys.path:
     sys.path.append("../")
-from lib.envs.gridworld import GridworldEnv
+from lib.env.gridworld import GridworldEnv
 
 env = GridworldEnv()
 
@@ -11,7 +11,7 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
     Evaluate a policy given an environment and a full description of the environment's dynamics.
 
     Args:
-        policy: [S, A] shaped matrix representing the policy.
+        policy: [S, lA] shaped matrix representing the policy.
         env: OpenAI env. evn.P represents the transition probabilities of the environment.
             env.P[s][a] is a list of transition tuplies (prob, next_state, reward, done).
             env.nS is a number of states in the environment
@@ -25,9 +25,9 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
     """
     # Start with a random (all 0) value function
     V = np.zeros(env.nS)
-    print("env: {}".format(env))
-    print("env.P: {}".format(env.P))
-    print("env.[0][UP]: {}".format(env[0][UP]))
+    print("env: {}\n\n".format(env))
+    print("env.P: {}\n\n".format(env.P))
+    print("env.P[0][1]: {}\n\n".format(env.P[0][1]))
     while True:
         # TODO: Implement!
         break
