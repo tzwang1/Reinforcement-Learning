@@ -11,7 +11,7 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
     Evaluate a policy given an environment and a full description of the environment's dynamics.
 
     Args:
-        policy: [S, lA] shaped matrix representing the policy.
+        policy: [S, A] shaped matrix representing the policy.
         env: OpenAI env. evn.P represents the transition probabilities of the environment.
             env.P[s][a] is a list of transition tuplies (prob, next_state, reward, done).
             env.nS is a number of states in the environment
