@@ -65,7 +65,7 @@ class GridworldEnv(discrete.DiscreteEnv):
                 ns_right = s if x == (MAX_X - 1) else s + 1
                 ns_down = s if y == (MAX_Y - 1) else s + MAX_X
                 ns_left = s if x == 0 else s - 1
-                P[s][UP] = [(1.0, ns_right, reward, is_done(ns_right))]
+                P[s][UP] = [(1.0, ns_up, reward, is_done(ns_up))]
                 P[s][RIGHT] = [(1.0, ns_right, reward, is_done(ns_right))]
                 P[s][DOWN] = [(1.0, ns_down, reward, is_done(ns_down))]
                 P[s][LEFT] = [(1.0, ns_left, reward, is_done(ns_left))]

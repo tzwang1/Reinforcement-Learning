@@ -25,11 +25,8 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
     """
     # Start with a random (all 0) value function
     V = np.zeros(env.nS)
-    print("policy: {}\n\n".format(policy))
-    print("env: {}\n\n".format(env))
-    print("env.P: {}\n\n".format(env.P))
-    print("env.P[0][1]: {}\n\n".format(env.P[0][1]))
     while True:
+        delta = 0
         # For each state, perform a "full backup"
         for s in range(env.nS):
             v = 0
@@ -38,7 +35,7 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
                 # For each action, look at the possible next states...
                 for prob, next_state, reward, done in env.P[s][a]:
                     # Calculate the expected value
-                    v += action_prob * prob * (reward + discount_factor*V[next_state])
+                    v += action_prob * prob * (reward + discount_factor * V[next_state])
             # How much out value function changed (across any states)
             delta = max(delta, np.abs(v - V[s]))
             V[s] = v
