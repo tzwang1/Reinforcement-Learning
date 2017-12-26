@@ -25,6 +25,9 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
     """
     # Start with a random (all 0) value function
     V = np.zeros(env.nS)
+    print("env: {}".format(env))
+    print("env.P: {}".format(env.P))
+    print("env.[0][UP]: {}".format(env[0][UP]))
     while True:
         # TODO: Implement!
         break
