@@ -47,4 +47,30 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
             break
     return np.array(V)
 
-    #def policy_improvement
+    def policy_improvement(env, policy_eval_fn=policy_eval, discount_factor=1.0):
+        """
+        Policy Improvement Algorithm. Iteratively evaluates and improves a policy
+        until an optimal policy is found.
+
+        Args:
+            env: The OpenAI environment.
+            policy_eval_fun: Policy Evaluation function that takes 3 argument:
+                policy, env, discount_factor
+            discount_factor: gamma discount factor
+        
+        Returns:
+            A tuple (policy, V).
+            policy is the optimal policy, a matrix of shape [S, A] where each state s
+            contains a valid probability distribution over actions.
+            V is the value function for the optimal policy.
+        """
+        # Start with a random policy
+        policy = np.ones([env.nS, env.nA]) / env.nA
+        
+        while True:
+            # Implement this!
+            break
+        
+        return policy, np.zeros(env.nS)
+
+        policy, v = policy_improvement(env)
