@@ -3,7 +3,7 @@ import pprint
 import sys
 if "../" not in sys.path:
     sys.path.append("../")
-from lib.envs.gridworld import GridworldEnv
+from lib.env.gridworld import GridworldEnv
 
 pp = pprint.PrettyPrinter(indent=2)
 env = GridworldEnv()
@@ -69,8 +69,32 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
         
         while True:
             # Implement this!
-            break
-        
-        return policy, np.zeros(env.nS)
+            V = policy_eval_fn(policy, env)
+            policy_stable = True
+            for s in range(env.nS):
+                # The best action we would take under the current policy
+                chosen_a = np.argmax(policy[s])
+                
+                # Find the best action by one-step lookahead
+                # Ties are resolved arbitrarily
+                action_values = np.zeros(env.nA)
+                #for a in range(env.nA):
+                for a, action_prob in enumerate(policy[s]):
+                    for prob, next_state, reward, done in env.P[s][a]:
+                        action_values[a] += action_prob * prob * (reward + discount_factor * V[next_state])
+                best_a = np.argmax(action_values)
+                    
+                # Greedily update the policy
+                if chosen_a != best_a:
+                    policy_stable = False
+                policy[s] = np.eye(env.nA)[best_a]
 
-        policy, v = policy_improvement(env)
+        # If the policy is stable we've found an optimal policy. Return it
+        if policy_stable:
+            return policy, V
+
+    policy, v = policy_improvement(env)
+    
+    # Test the value function
+    expected_v = np.array([ 0, -1, -2, -3, -1, -2, -3, -2, -2, -3, -2, -1, -3, -2, -1,  0])
+    np.testing.assert_array_almost_equal(v, expected_v, decimal=2)
